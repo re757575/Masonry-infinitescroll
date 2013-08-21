@@ -1,0 +1,28 @@
+extends layout2
+
+block mycontent
+  h1= title
+  p Welcome to #{title}
+  #container.myclass
+
+    - a= "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGFDo78qGlzPbmYpzap8odkCMgIhNUcdMqNAg2yXQncQ5p-FlxGw"
+    - b= "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSyRnltVDX2IumQdooR9TFI_BfFIJ4j9EytvgnLGXcKmZxEx8oL2w"
+    - c= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ1eLfgsJSfU46KS5XwDKB3ki2-c9qCp4MhTRXFCAolNv8SXj4pXw"     
+    - d= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUQQVWj5ipJICMU_oUmFyVdMNsgZ2JN6b2QnZAWa3HIZcvVBKm"
+    - e= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdAvhPU5-ZI4NbnpyN7FFrmilHfLlMa3pPcJFhCdoYwsElnkE"
+    - f= "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQpTmX1DZRZjV_l5-09iw0iXz4ICOM5LqfmoX_cZU4O_N2H6NgX"
+    - g= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThjkx83NZbIMi4gouM0vnTfH7J_mpKFazZn0gXAHUmLB5Ft2dHsQ"
+    - h= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjWhUJFpd5xoTqcwlSuHm8ZfOCavuKVujfjOxJfscN-thKY6S"
+    - obj= [a,b,c,d,e,f,g,h]         
+     each val, index in obj
+       .box.item.shadow
+         a(href="\masonry",title="阿喜")
+           img(src="#{val}",alt="阿喜")
+         h2
+           a(href="\masonry",title="阿喜")
+            p= '['+index+']阿喜'
+
+  
+
+    .clear
+
